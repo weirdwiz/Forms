@@ -27,6 +27,8 @@ if ($result->num_rows > 0) {
             } else {
                 echo "Not found";
             }
+        } else {
+            echo "Username not found";
         }
     }
 } else {
