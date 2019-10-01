@@ -36,7 +36,7 @@
     <div class="main">
         <p class="sign" align="center">Sign in</p>
         <form class="form1" action="authenticate.php" method="post">
-            <input class="un " type="text" name="un" align="center" placeholder="Username" required>
+            <input class="un " type="text" name="uname" align="center" placeholder="Username" required>
             <input class="pass" type="password" name="pass" align="center" placeholder="Password" required>
             <input class="submit" type="submit" value="Sign in" align="center">
             <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>

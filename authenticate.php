@@ -13,17 +13,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from user(username, password)";
+$uname = $_POST["uname"];
+$pass = $_POST["pass"];
+
+$sql = "SELECT username, password FROM user";
 $result = $conn->query($sql);
 
-if($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "username" . $row["username"] . "password" . $row["password"] . "<br>";
-    }    
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        if ($uname == $row['username']) {
+            if ($uname == $row['username'] && $pass == $row['password']) {
+                header("Location: main.php");
+            } else {
+                echo "Not found";
+            }
+        }
+    }
+} else {
+    echo "Table is empty";
 }
-else {
-    echo "No result";
-}
-
 $conn->close();
-?>
