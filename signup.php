@@ -13,15 +13,14 @@
     <div class="main">
         <p class="sign" align="center">Sign Up</p>
         <form class="form1">
-            <input class="un " type="text" align="center" placeholder="Username">
+            <input class="un" type="text" align="center" placeholder="Username">
             <input class="pass" type="password" align="center" placeholder="Password">
             <a class="submitup" align="center">Register</a>
-            <a href="index.html">
+            <a href="index.php">
                 <p class="register" align="center">Sign in</p>
             </a>
         </form>
-    </div>
-
+    </div>`
 </body>
 
 </html>
