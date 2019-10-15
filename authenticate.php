@@ -13,24 +13,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = mysqli_real_escape_string($conn, $_POST["username"]); // To prevent SQL injection
+$password = mysqli_real_escape_string($conn, $_POST["password"]);
+$encryptedpassword = hash('SHA512', $password);
 
-$sql = "SELECT username, password FROM user where username = '$username'"; 
+$sql = "SELECT username, password FROM user where username = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        if ($password == $row['password']) {
-            echo "Mila"; 
+        if ($encryptedpassword == $row['password']) {
+            echo "Mila";
             session_start();
-        } 
-        else {
+        } else {
             echo "Wrong Password";
         }
     }
-}
-else {
+} else {
     echo "User doesn't exist";
 }
 // if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {

@@ -13,8 +13,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = mysqli_real_escape_string($conn, $_POST["username"]); // To prevent SQL injection
+$password = mysqli_real_escape_string($conn, $_POST["password"]);
+$encryptedpassword = hash('SHA512', $password);
 
 $sql = "SELECT username, password FROM user where username = '$username'";
 $result = $conn->query($sql);
@@ -22,7 +23,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     echo "Username already exist, Please choose different name";
 } else if ($username != $row['username']) {
-    $insert = "INSERT INTO user values ('$username','$password')";
+    $insert = "INSERT INTO user values ('$username','$encryptedpassword')";
     $result = $conn->query($insert);
     echo "Registered successfully";
 }
