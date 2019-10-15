@@ -13,15 +13,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$uname = $_POST["uname"];
-$pass = $_POST["pass"];
+$username = $_POST["username"];
+$password = $_POST["password"];
 
-$sql = "SELECT username, password FROM user where username = '$uname'"; 
+$sql = "SELECT username, password FROM user where username = '$username'"; 
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        if ($pass == $row['password']) {
+        if ($password == $row['password']) {
             echo "Mila"; 
             session_start();
             

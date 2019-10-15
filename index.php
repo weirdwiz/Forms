@@ -12,8 +12,8 @@
 	<div class="main">
 		<div class="sign" align="center">Sign in</div>
 		<form class="form1" action="authenticate.php" method="post">
-			<input class="username" type="text" name="uname" align="center" placeholder="Username" required>
-			<input class="password" type="password" name="pass" align="center" placeholder="Password" required>
+			<input class="username" type="text" name="username" align="center" placeholder="Username" required>
+			<input class="password" type="password" name="password" align="center" placeholder="Password" required>
 			<input class="submit" type="submit" value="Sign in" align="center">
 			<div class="forgot" align="center"><a href="#">Forgot Password?</a></div>
 			<a href="signup.php">
