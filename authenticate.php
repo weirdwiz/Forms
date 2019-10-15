@@ -24,8 +24,6 @@ if ($result->num_rows > 0) {
         if ($password == $row['password']) {
             echo "Mila"; 
             session_start();
-            
-
         } 
         else {
             echo "Wrong Password";
