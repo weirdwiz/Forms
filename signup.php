@@ -9,18 +9,18 @@
 </head>
 
 <body>
-    <p class="head" align="center">Open Form</p>
+    <div class="head" align="center">Open Form</div>
     <div class="main">
-        <p class="sign" align="center">Sign Up</p>
+        <div class="sign" align="center">Sign Up</div>
         <form class="form1">
-            <input class="un" type="text" align="center" placeholder="Username">
-            <input class="pass" type="password" align="center" placeholder="Password">
-            <a class="submitup" align="center">Register</a>
+            <input class="username" type="text" align="center" placeholder="Username">
+            <input class="password" type="password" align="center" placeholder="Password">
+            <a class="signup" align="center">Register</a>
             <a href="index.php">
-                <p class="register" align="center">Sign in</p>
+                <div class="register" align="center">Sign in</div>
             </a>
         </form>
-    </div>`
+    </div>
 </body>
 
 </html>
