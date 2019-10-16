@@ -8,16 +8,16 @@
 </head>
 
 <body>
-	<p class="head" align="center">Open Form</p>
+	<div class="head" align="center">Open Form</div>
 	<div class="main">
-		<p class="sign" align="center">Sign in</p>
+		<div class="sign" align="center">Sign in</div>
 		<form class="form1" action="authenticate.php" method="post">
-			<input class="un " type="text" name="uname" align="center" placeholder="Username" required>
-			<input class="pass" type="password" name="pass" align="center" placeholder="Password" required>
+			<input class="username" type="text" name="username" align="center" placeholder="Username" required>
+			<input class="password" type="password" name="password" align="center" placeholder="Password" required>
 			<input class="submit" type="submit" value="Sign in" align="center">
-			<p class="forgot" align="center"><a href="#">Forgot Password?</a></p>
+			<div class="forgot" align="center"><a href="#">Forgot Password?</a></div>
 			<a href="signup.php">
-				<p class="register" align="center">Sign Up</p>
+				<div class="register" align="center">Sign Up</div>
 			</a>
 		</form>
 	</div>

@@ -21,18 +21,10 @@ $sql = "SELECT username, password FROM user where username = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        if ($encryptedpassword == $row['password']) {
-            echo "Mila";
-            session_start();
-        } else {
-            echo "Wrong Password";
-        }
-    }
-} else {
-    echo "User doesn't exist";
+    echo "Username already exist, Please choose different name";
+} else if ($username != $row['username']) {
+    $insert = "INSERT INTO user values ('$username','$encryptedpassword')";
+    $result = $conn->query($insert);
+    echo "Registered successfully";
 }
-// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-//     header("Location: main.php");
-// }
 $conn->close();
