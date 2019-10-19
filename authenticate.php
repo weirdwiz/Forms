@@ -23,8 +23,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         if ($encryptedpassword == $row['password']) {
-            echo "Mila";
             session_start();
+            $_SESSION["username"] = mysqli_real_escape_string($conn, $_POST["username"]); // To prevent SQL injection
+            header("Location: main.php");
         } else {
             echo "Wrong Password";
         }

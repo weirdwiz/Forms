@@ -14,7 +14,7 @@
         <form class="form1" action="register.php" method="post">
             <input class="username" type="text" name="username" align="center" placeholder="Username">
             <input class="password" type="password" name="password" align="center" placeholder="Password">
-            <input class="signup" type="submit" value="Reguster" align="center">
+            <input class="signup" type="submit" value="Register" align="center">
             <a href="index.php">
                 <div class="register" align="center">Sign in</div>
             </a>
