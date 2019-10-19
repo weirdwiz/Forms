@@ -33,7 +33,4 @@ if ($result->num_rows > 0) {
 } else {
     echo "User doesn't exist";
 }
-// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-//     header("Location: main.php");
-// }
 $conn->close();
