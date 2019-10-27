@@ -25,6 +25,7 @@ if ($result->num_rows > 0) {
 } else if ($username != $row['username']) {
     $insert = "INSERT INTO user values ('$username','$encryptedpassword')";
     $result = $conn->query($insert);
+
     echo "Registered successfully";
 }
 $conn->close();

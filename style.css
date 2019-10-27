@@ -22,7 +22,7 @@ body {
 
 .sign {
     padding-top: 40px;
-    color: #8C55AA;
+    color: rgb(0, 0, 0);
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: 23px;
@@ -58,10 +58,10 @@ form.form1 {
 }
 
 .submit, .signup {
-  cursor: pointer;
+    cursor: pointer;
     border-radius: 5em;
     color: #fff;
-    background: linear-gradient(to right, rgb(166, 53, 185), #E040FB);
+    background: rgb(46, 45, 45);
     border: 0;
     padding-left: 40px;
     padding-right: 40px;
@@ -72,7 +72,20 @@ form.form1 {
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
-
+.button {
+    color: rgb(238, 235, 220);
+    border-radius: 3em;
+    border: 0;
+    background: rgb(46, 45, 45);
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px; 
+    font-family: 'Ubuntu', sans-serif;
+    /* margin-top: 10%; */
+    margin: 8%;
+    font-size: 20px;
+}
 .forgot, .register {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
     color: #2C3539;
@@ -81,8 +94,8 @@ form.form1 {
 
 a {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-    color: rgb(164, 122, 172);
-    text-decoration: none
+    color: rgb(2, 2, 2);
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {

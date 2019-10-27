@@ -8,9 +8,24 @@
 </head>
 
 <body>
-    <p class="head" align="center">Open Form</p>
-    <div class="main">
-        <p>Hello this is the main page
+    <div style="float:left;">
+        <?php
+        session_start();
+        echo "Hi " . $_SESSION["username"];
+        ?>
+    </div>
+    <div style="float:right; margin-bottom:5px; color:black; ">
+        <a href="logout.php">
+            Log out</a>
+    </div>
+    <br>
+    <div class="head" align="center">Open Form</div>
+    <div align="center">
+        <form class=" form1" action="" method="post">
+            <input class="button" type="submit" value="Create Form" align="center">
+            <input class="button" type="submit" value="View Form" align="center">
+            <input class="button" type="submit" value="View Response" align="center">
+        </form>
     </div>
 </body>
 
