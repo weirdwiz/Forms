@@ -1,4 +1,5 @@
 <?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 
 $servername = "localhost";
 $username = "root";
@@ -29,15 +30,3 @@ if ($result->num_rows > 0) {
     echo "Registered successfully";
 }
 $conn->close();
-?>
-<script>
-    function myFunction() {
-        var txt;
-        if (confirm('Press a button!')) {
-            txt = 'You pressed OK!';
-        } else {
-            txt = 'You pressed Cancel!';
-        }
-        document.getElementById('demo').innerHTML = txt;
-    }
-</script>

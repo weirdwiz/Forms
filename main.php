@@ -11,6 +11,10 @@
     <div style="float:left;">
         <?php
         session_start();
+        if ($_SESSION['username'] == NULL) {
+            session_destroy();
+            header("location: index.php");
+        }
         echo "Hi " . $_SESSION["username"];
         ?>
     </div>
@@ -21,10 +25,10 @@
     <br>
     <div class="head" align="center">Open Form</div>
     <div align="center">
-        <form class=" form1" action="" method="post">
-            <input class="button" type="submit" value="Create Form" align="center">
-            <input class="button" type="submit" value="View Form" align="center">
-            <input class="button" type="submit" value="View Response" align="center">
+        <form class="form1">
+            <input class="button" type="submit" name="create" value="Create Form">
+            <input class="button" type="submit" name="view" value="View Form">
+            <input class="button" type="submit" name="respose" value="View Response">
         </form>
     </div>
 </body>

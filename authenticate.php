@@ -1,4 +1,5 @@
 <?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 
 $servername = "localhost";
 $username = "root";
@@ -23,6 +24,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         if ($encryptedpassword == $row['password']) {
+            session_set_cookie_params(0);
             session_start();
             $_SESSION["username"] = mysqli_real_escape_string($conn, $_POST["username"]); // To prevent SQL injection
             header("Location: main.php");
@@ -33,7 +35,4 @@ if ($result->num_rows > 0) {
 } else {
     echo "User doesn't exist";
 }
-// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-//     header("Location: main.php");
-// }
 $conn->close();
