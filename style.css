@@ -3,6 +3,12 @@ body {
     font-family: 'Ubuntu', sans-serif;
     overflow: hidden;
 }
+.message { /*used for success.php and fail.php */
+font-family: 'Bebas Neue'; 
+font-size: 30px;
+margin-top: 200px;
+text-align: center;
+}
 
 .head {
     font-family: 'Bebas Neue'; 
