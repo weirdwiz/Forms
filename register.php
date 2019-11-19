@@ -20,6 +20,7 @@ $encryptedpassword = hash('SHA512', $password);
 
 $sql = "SELECT username, password FROM user where username = '$username'";
 $result = $conn->query($sql);
+$row = $result->fetch_assoc();
 
 if ($result->num_rows > 0) {
     header("location: fail.php");

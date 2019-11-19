@@ -34,7 +34,7 @@ text-align: center;
     font-size: 23px;
 }
 
-.username, .password {
+.username , .password , form[type="text"] {
 width: 76%;
 color: rgb(38, 50, 56);
 font-weight: 700;
