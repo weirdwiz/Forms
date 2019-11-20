@@ -15,7 +15,6 @@
 			<input class="username" type="text" name="username" align="center" placeholder="Username" required>
 			<input class="password" type="password" name="password" align="center" placeholder="Password" required>
 			<input class="submit" type="submit" value="Sign in" align="center">
-			<div class="forgot" align="center"><a href="#">Forgot Password?</a></div>
 			<a href="signup.php">
 				<div class="register" align="center">Sign Up</div>
 			</a>

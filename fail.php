@@ -10,9 +10,12 @@
 <body>
     <div class="head" align="center">Open Form</div>
     <div class="message">
-        Sorry this username is already taken!<br> Please choose different username and try again.
+        <?php
+        session_start();
+        $message = $_SESSION["message"];
+        echo $message;
+        ?>
     </div>
-    <h2 align="center"><a href="signup.php"><u> Sign up <u><a></h2>
 
 </body>
 

@@ -29,10 +29,20 @@ if ($result->num_rows > 0) {
             $_SESSION["username"] = mysqli_real_escape_string($conn, $_POST["username"]); // To prevent SQL injection
             header("Location: main.php");
         } else {
-            echo "Wrong Password";
+            session_start();
+            $message = "Wrong Password entered!<br>
+            Please try again. 
+            <h5 align='center'><a href='index.php'><u> Sign in <u><a></h5>";
+            $_SESSION["message"] = $message;
+            header("location: fail.php");
         }
     }
 } else {
-    echo "User doesn't exist";
+    session_start();
+    $message = "No user exist with the following username!<br>
+    Please create an account and try again.
+    <h5 align='center'><a href='signup.php'><u> Sign Up <u><a></h5>";
+    $_SESSION["message"] = $message;
+    header("location: fail.php");
 }
 $conn->close();

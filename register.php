@@ -23,6 +23,11 @@ $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 
 if ($result->num_rows > 0) {
+    session_start();
+    $message = "Sorry but this username is already taken <br> 
+    Please choose a different username and try again.
+    <h5 align='center'><a href='signup.php'><u> Sign up <u><a></h5>";
+    $_SESSION["message"] = $message;
     header("location: fail.php");
 } else {
     $insert = "INSERT INTO user values ('$username','$encryptedpassword')";
