@@ -20,6 +20,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
 }
+
+$user = uniqd("user");
 ?>
 
 <div>
@@ -31,9 +33,12 @@ if ($conn->connect_error) {
 
 $result = $conn->query("SELECT question from form_question where uuid=$form_UUID");
 while($row = $result->fetch_assoc()){
-        echo "<h1>".$row["question"]."</h1>;
+        echo "<h1>".$row["question"]."</h1>";
+        echo "<input type=\"text\" name=\"answer[]\">";
 }
+echo "<input type=\"text\" value=$form_UUID disabled name=\"form_UUID\">";
 ?>
+<input type="submit" value="submit">
 </form>
 </div>
 
